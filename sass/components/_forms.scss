@@ -1,0 +1,62 @@
+.add-ingredient {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 2rem 2rem 2rem;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  &__label {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    font-family: inherit;
+    font-size: 1.6rem;
+    background-color: rgba($color-grey-light, .7);
+    border: 0;
+    border-bottom: 2px solid transparent;
+    padding: 1.5rem 2.5rem;
+    transition: all .2s;
+
+    &:focus {
+      outline: 0;
+      border-bottom: 2px solid $color-red;
+      box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark;
+    }
+  }
+}
+
+.meal-form {
+  display: flex;
+  justify-content: flex-end;
+
+  &__input {
+    font-family: inherit;
+    font-size: 1.6rem;
+    background-color: rgba($color-grey-light, .7);
+    border: 2px solid transparent;
+    padding: 1rem 2rem;
+    transition: all .2s;
+    margin-right: 2rem;
+
+    &:focus {
+      outline: 0;
+      border: 2px solid $color-add;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark;
+    }
+  }
+}

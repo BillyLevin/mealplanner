@@ -1,0 +1,64 @@
+.meal-view {
+  @include mainContent;
+  display: none;
+
+  &__ingredients {
+    margin-bottom: 2rem;
+  }
+
+  &__totals {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    background-color: $color-red;
+    padding: 1rem;
+  }
+
+  &__total {
+    font-size: 2.2rem;
+    color: $color-white;
+  }
+
+  &__list {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+
+    &:nth-child(odd) {
+      background-color: rgba($color-grey-light, .6);
+    }
+
+    &:first-child {
+      border-top: 2px solid $color-red;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 2rem;
+      flex: 1;
+    }
+  }
+
+  &__item-name {
+    font-weight: 700;
+    color: $color-red;
+  }
+
+  &__item-calories {
+    font-weight: 700;
+  }
+
+  &__delete {
+    margin-left: auto;
+  }
+
+  &__delete-icon {
+    @include deleteIcon(1.8rem);
+  }
+}

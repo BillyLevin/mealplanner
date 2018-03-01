@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>MealPlanner</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="heading-logo">
+        MealPlanner
+      </h1>
+      <span class="header__day">Monday</span>
+    </header>
+    <div class="content">
+      <nav class="sidebar">
+        <ul class="side-nav">
+          <li class="side-nav__item"><a href="#" class="side-nav__link">Create Meal</a></li>
+          <li class="side-nav__item"><a href="#" class="side-nav__link">Monday</a></li>
+          <li class="side-nav__item"><a href="#" class="side-nav__link">Tuesday</a></li>
+          <li class="side-nav__item"><a href="#" class="side-nav__link">Wednesday</a></li>
+          <li class="side-nav__item"><a href="#" class="side-nav__link">Thursday</a></li>
+          <li class="side-nav__item"><a href="#" class="side-nav__link">Friday</a></li>
+          <li class="side-nav__item"><a href="#" class="side-nav__link">Saturday</a></li>
+          <li class="side-nav__item"><a href="#" class="side-nav__link">Sunday</a></li>
+        </ul>
+      </nav>
+      <main class="main-content">
+        <div class="welcome">
+          <h2 class="heading-primary">Welcome to MealPlanner</h1>
+          <p class="lead">What would you like to do?</p>
+          <div class="features">
+            <div class="feature feature--view">
+              <svg class="feature__icon">
+                <use xlink:href="img/sprite.svg#icon-calendar"></use>
+              </svg>
+              <p class="feature__text">View today's meal plan</p>
+            </div>
+            <div class="feature feature--create">
+              <svg class="feature__icon">
+                <use xlink:href="img/sprite.svg#icon-spoon-knife"></use>
+              </svg>
+              <p class="feature__text">Create a new meal</p>
+            </div>
+          </div>
+        </div>
+        <div class="meal-view">
+          <h2 class="heading-primary">
+            Create Meal
+          </h2>
+          <p class="lead">Add your desired ingredients and create a meal!</p>
+          <div class="meal-view__ingredients">
+            <form class="add-ingredient">
+              <h3 class="heading-form">Add Ingredient</h3>
+              <div class="add-ingredient__field">
+                <label class="add-ingredient__label" for="ingredient">Name</label>
+                <input type="text" class="add-ingredient__input" placeholder="Ingredient name" id="ingredient-name">
+              </div>
+              <div class="add-ingredient__field">
+                <label class="add-ingredient__label" for="ingredient">Calories</label>
+                <input type="number" class="add-ingredient__input" placeholder="Calories" id="ingredient-calories">
+              </div>
+              <div class="add-ingredient__field">
+                <label class="add-ingredient__label" for="ingredient">Protein (g)</label>
+                <input type="number" class="add-ingredient__input" placeholder="Protein (g)" id="ingredient-protein">
+              </div>
+              <button class="btn btn--add add-ingredient-btn">Add Ingredient</button>
+            </form>
+            <h3 class="heading-secondary">Ingredients</h3>
+            <div class="totals">
+              <div class="total">
+                Total Calories: <span class="total-meal-calories">0</span>
+              </div>
+              <div class="total">
+                Total Protein: <span class="total-meal-protein">0g</span>
+              </div>
+            </div>
+            <ul class="meal-view__list">
+            </ul>
+          </div>
+          <form class="meal-form">
+            <div class="meal-form__field">
+              <input type="text" class="meal-form__input" id="meal-name" placeholder="Meal name">
+            </div>
+            <button class="btn btn--add add-meal-btn">Create Meal</button>
+          </form>
+        </div>
+        <div class="day-view">
+          <h2 class="heading-primary day-heading">
+            Monday
+          </h2>
+          <p class="lead day-lead">
+            View and edit your meal schedule for Monday
+          </p>
+          <form class="day-view__add-meal">
+            <select id="add-meal-drop" class="day-view__add-meal-input">
+            </select>
+            <button class="btn btn--add" id="add-meal-day">Add meal</button>
+          </form>
+          <div class="totals">
+            <div class="total">
+              Total Calories: <span class="total-day-calories">3200</span>
+            </div>
+            <div class="total">
+              Total Protein: <span class="total-day-protein">160g</span>
+            </div>
+          </div>
+          <div class="day-view__meals">
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

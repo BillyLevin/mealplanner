@@ -1,0 +1,33 @@
+.features {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &__icon {
+    width: 15rem;
+    height: 15rem;
+    fill: $color-red;
+    margin-bottom: 2rem;
+    transition: all .2s;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color-grey-dark;
+  }
+  
+  &:hover &__icon {
+    fill: $color-red-dark;
+  }
+}

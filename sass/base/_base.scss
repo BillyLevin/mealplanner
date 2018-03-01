@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font-default;
+  color: $color-grey-dark;
+  background-image: linear-gradient(to right, $color-red-light, $color-red-dark);
+  padding: 8rem 4rem;
+  overflow-y: scroll;
+}

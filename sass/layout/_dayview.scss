@@ -1,0 +1,75 @@
+.day-view {
+  @include mainContent;
+  display: none;
+
+  &__add-meal {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  &__add-meal-input {
+    font-family: inherit;
+    flex: 1;
+    border: 0;
+    background-color: $color-grey-light;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    margin-right: 2rem;
+    border: 2px solid transparent;
+
+    &:focus {
+      outline: 0;
+      border: 2px solid $color-add;
+    }
+  }
+
+  &__meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__meal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid $color-red;
+    margin-bottom: 2rem;
+    flex: 0 0 49%;
+    position: relative;
+  }
+
+  &__delete {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+  }
+
+  &__delete-icon {
+    @include deleteIcon(2.5rem);
+  }
+
+  &__meal-icon {
+    width: 5rem;
+    height: 5rem;
+    fill: $color-grey-dark;
+    margin-bottom: 1rem;
+  }
+
+  &__meal-name {
+    color: $color-red;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  &__meal-calories {
+    font-size: 1.8rem;
+  }
+
+  &__meal-protein {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+}

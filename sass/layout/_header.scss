@@ -1,0 +1,14 @@
+.header {
+  background-color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+
+  &__day {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid $color-red;
+  }
+}
