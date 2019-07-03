@@ -2,6 +2,10 @@
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-direction: column;
+  }
 }
 
 .feature {
@@ -11,12 +15,22 @@
   align-items: center;
   cursor: pointer;
 
+  @media only screen and (max-width: $bp-smallest) {
+    margin-bottom: 3rem;
+  }
+
   &__icon {
     width: 15rem;
     height: 15rem;
     fill: $color-red;
     margin-bottom: 2rem;
     transition: all .2s;
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin-bottom: 1rem;
+      width: 10rem;
+      height: 10rem;
+    }
   }
 
   &__text {
@@ -25,6 +39,10 @@
     text-transform: uppercase;
     font-weight: 700;
     color: $color-grey-dark;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.5rem;
+    }
   }
   
   &:hover &__icon {

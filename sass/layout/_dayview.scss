@@ -5,6 +5,9 @@
   &__add-meal {
     display: flex;
     margin-bottom: 2rem;
+    @media only screen and (max-width: $bp-smallest) {
+      flex-direction: column;
+    }
   }
 
   &__add-meal-input {
@@ -17,6 +20,11 @@
     margin-right: 2rem;
     border: 2px solid transparent;
 
+    @media only screen and (max-width: $bp-smallest) {
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+    }
+
     &:focus {
       outline: 0;
       border: 2px solid $color-add;
@@ -27,6 +35,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media only screen and (max-width: $bp-smallest) {
+      display: block;
+    }
   }
 
   &__meal {

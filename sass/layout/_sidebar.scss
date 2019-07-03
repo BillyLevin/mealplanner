@@ -7,9 +7,19 @@
   list-style: none;
   text-transform: uppercase;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   &__item {
     &:not(:last-child) {
       margin-bottom: .5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 0;
+      }
     }
 
   }
@@ -23,6 +33,10 @@
       display: flex;
       align-items: center;
       transition: all .2s;
+      @media only screen and (max-width: $bp-medium) {
+        padding: 1.5rem 1rem;
+        font-size: 1.4rem;
+      }
     }
 
     &:hover,
